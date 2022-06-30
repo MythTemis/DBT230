@@ -49,6 +49,10 @@ def print_employee(path):
                 print(employee)
             f.close()
 
+def add_employee(id, first, last, year):
+    nfile = os.write("%s.csv" % id, "w")
+    #put the file in 
+
 print_people_details(SIMPLE_PATH)
 print_employee(SIMPLE_PATH)
 
