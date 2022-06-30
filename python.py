@@ -8,8 +8,8 @@ class Employee:
         self.lastName = lastName
         self.hireYear = hireYear
     
-    def toString(employee):
-        print("\nEmployee ID: " + employee.id +
+    def __str__(employee):
+        return ("\nEmployee ID: " + employee.id +
               "\nFirst Name: " + employee.firstName +
               "\nLast Name: " + employee.lastName + 
               "\nHire Year: " + employee.hireYear
@@ -20,8 +20,9 @@ class Employee:
 
 
 #--------------------------------------------------------
+SIMPLE_PATH = r'C:\Users\atemple\source\repos\DBT230\Assignment 1 - data\people\simple/'
 
-SIMPLE_PATH = r'C:\Users\zhenx\Desktop\Assignment 1 - data (3)\people\simple/'
+#SIMPLE_PATH = r'C:\Users\zhenx\Desktop\Assignment 1 - data (3)\people\simple/'
 
 def print_people_details(path):
     files = os.listdir(path)
@@ -45,7 +46,7 @@ def print_employee(path):
                 lName = information[2]
                 hireYear = information[3]
                 employee = Employee(id,fName,lName,hireYear)
-                employee.toString()
+                print(employee)
             f.close()
 
 print_people_details(SIMPLE_PATH)
