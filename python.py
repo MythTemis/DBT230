@@ -10,14 +10,10 @@ class Employee:
     
     def __str__(employee):
         return ("\nEmployee ID: " + employee.id +
-              "\nFirst Name: " + employee.firstName +
-              "\nLast Name: " + employee.lastName + 
-              "\nHire Year: " + employee.hireYear
-                
-        )
-
-
-
+            "\nFirst Name: " + employee.firstName +
+            "\nLast Name: " + employee.lastName + 
+            "\nHire Year: " + employee.hireYear
+            )
 
 #--------------------------------------------------------
 SIMPLE_PATH = r'C:\Users\atemple\source\repos\DBT230\Assignment 1 - data\people\simple/'
@@ -51,7 +47,9 @@ def print_employee(path):
 
 def add_employee(id, first, last, year):
     nfile = os.write("%s.csv" % id, "w")
-    #put the file in 
+    #put the file in the place
+    #add the rest of the values
+    #write
 
 print_people_details(SIMPLE_PATH)
 print_employee(SIMPLE_PATH)
