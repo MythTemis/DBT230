@@ -16,7 +16,7 @@ class Employee:
             )
 
 #--------------------------------------------------------
-SIMPLE_PATH = r'C:\Users\atemple\source\repos\DBT230\DBT230\Assignment 1 - data\people\simple/'
+SIMPLE_PATH = r'C:\Users\atemple\source\repos\DBT230\Assignment 1 - data\people\simple/'
 
 #SIMPLE_PATH = r'C:\Users\zhenx\Desktop\Assignment 1 - data (3)\people\simple/'
 
@@ -45,11 +45,20 @@ def print_employee(path):
                 print(employee)
             f.close()
 
-def add_employee(id, first, last, year):
-    nfile = os.write("%s.csv" % id, "w")
-    #put the file in the place
-    #add the rest of the values
-    #write
+#----------------------Add Employee----------------------------------------
+
+def add_employee(ID,firstName,lastName,hireYear):
+    location_file = r'C:\Users\zhenx\Desktop\Assignment 1 - data (3)\people\long/'
+    file_name = "10001.txt"
+    newFileLocation = os.path.join(location_file, file_name)
+    print(newFileLocation)
+
+    newFile = open(newFileLocation, "w")
+
+    newFile.write(ID + "," + firstName + "," + lastName +"," + hireYear)
+    newFile.close()
+    
+
 
 def update_employee(id, first_name, last_name, hire_date):
     file_name = str(id) + ".txt"
@@ -61,7 +70,19 @@ def update_employee(id, first_name, last_name, hire_date):
         file_reference.close()
 
 
-print_people_details(SIMPLE_PATH)
-print_employee(SIMPLE_PATH)
-update_employee(44545, "firstName", "lastName", )
+#----------------------Delete Employee----------------------------------------
+
+#----------------------Update Employee----------------------------------------
+
+#-------------------------------------------------------------    
+
+#print_people_details(SIMPLE_PATH)
+#print_employee(SIMPLE_PATH)
+
+
+ID = input("Enter your ID: ")
+firstName = input("Enter first name: ")
+lastName = input("Enter last name: ")
+hireYear = input("Enter hire year: ")
+add_employee(ID,firstName,lastName,hireYear)
 
